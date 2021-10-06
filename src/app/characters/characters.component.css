@@ -1,0 +1,75 @@
+#isAlive{
+    color: #2a9d8f;
+}
+#isDead{
+    color: #e76f51;
+}
+.alive{
+    color: #2a9d8f;
+}
+.dead{
+    color: #e76f51;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #132025;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px black;
+   background-color: #264653;
+   margin: 5px;
+   border-radius: 15px;
+}
+img{
+    border-radius: 15px;
+}
+
+.card:hover{
+    margin: 10px;
+}
+
+#unknown{
+    color: gray;
+}
+.form-control{
+    border-radius: 6px;
+    border-color: aliceblue;
+    background-color: #132025 ;
+    color: white;
+    width: 300px;
+    outline: rgba(255, 255, 255, 0);
+    padding: 2px;
+    
+}
+
+.search{
+    color: white;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.select{
+    color: white;
+    font-size: 2em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#select{
+    margin-top: 6px;
+    background-color: #264653;
+    color: white;
+    outline: transparent;
+    border-radius: 15px;
+}

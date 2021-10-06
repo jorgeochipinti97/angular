@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <div class="slider">
+        <div><img
+                src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2021/06/rick-morty-2381623.jpg?itok=KBfLZ3O6">
+        </div>
+        <div><img
+                src="https://i2.wp.com/codigoespagueti.com/wp-content/uploads/2020/05/Rick-Morty-Sexta-Temporada.jpg?resize=1200%2C720&quality=80&ssl=1">
+        </div>
+        <div><img
+                src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rick-and-morty-s5-1625139647.jpg?crop=0.846xw:1.00xh;0.0708xw,0&resize=768:*">
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="search">
+        <label for="filterCharacters">Filter by name</label>
+        <div>
+            <input type="text" class="form-control" name="filterCharacters" placeholder="search"
+                [(ngModel)]="filterCharacters">
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="select">
+        <label for="select">Filter by Status</label>
+        <select [(ngModel)]="opcionSelecionado" (change)="capturar()" id="select" name="select">
+            <option value="all" selected>Select an option</option>
+            <option value="Alive">Alive</option>
+            <option value="Dead">Dead</option>
+        </select>
+    </div>
+</div>
+<div class="wrapper">
+    <div *ngFor="let e of personajes | filter:filterCharacters" class="card">
+        <img src="{{e.image}}" alt="">
+        <p>{{e.name}}</p>
+        <p>Origin: {{e.origin.name}}</p>
+        <span>
+            <p id="isAlive">{{e.status | alive}}</p>
+            <p id="isDead">{{e.status | dead}}</p>
+            <p id="unknown">{{e.status | unknown}}</p>
+        </span>
+    </div>
+</div>
+<div class="wrapper" *ngIf="filtro">
+    <div *ngFor="let e of characters | filter:filterCharacters" class="card">
+        <img src="{{e.image}}" alt="">
+        <p>{{e.name}}</p>
+        <p>Origin: {{e.origin.name}}</p>
+        <span>
+            <p id="isAlive">{{e.status | alive}}</p>
+            <p id="isDead">{{e.status | dead}}</p>
+            <p id="unknown">{{e.status | unknown}}</p>
+        </span>
+    </div>
+</div>

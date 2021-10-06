@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+h1{
+    text-align: center;
+    color: white;
+    
+}
+body{
+    background-color: #132025;
+ 
+}
+
+.imagenInicio{
+    width: 80%;
+   height: 500px
+}
+.wrapper{
+    display: flex;
+    justify-content:center;
+}

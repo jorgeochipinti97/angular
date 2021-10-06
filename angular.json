@@ -24,12 +24,16 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/bxslider/dist/jquery.bxslider.min.css"
             ],
-            "scripts": []
+            "scripts": [
+            "node_modules/jquery/dist/jquery.min.js",
+            "src/assets/bxslider/dist/jquery.bxslider.min.js"
+            ]
           },
           "configurations": {
             "production": {
